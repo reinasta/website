@@ -1,0 +1,23 @@
+<!-- create a variable ctaPrefix (see below for motivation) -->
+{% set ctaPrefix = cta %}
+
+
+<!-- check if ctaContent has been set; if it has, we override
+     the current call to action (stored in ctaPrefix) -->
+{% if ctaContent %}
+{% set ctaPrefix = ctaContent %}
+{% endif %}
+
+<article class="cta">
+    <div>
+        <div>
+            <h2>{{ ctaPrefix.title }}</h2>
+            <p>{{ ctaPrefix.summary }}</p>
+            <div>
+                <a href="{{ ctaPrefix.buttonUrl }}">
+                    {{ ctaPrefix.buttonText }}
+                </a>
+            </div>
+        </div>
+    </div>
+</article>

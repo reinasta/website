@@ -1,0 +1,14 @@
+{
+  "tools": [
+    {
+      "name": "abac",
+      "summary": "text queries for markdown authors",
+      "url": "https://github.com/reinasta/abac"
+    },
+    {
+      "name": "manki",
+      "summary": "generate flashcards from text files via Anki",
+      "url": "https://github.com/reinasta/manki"
+    }
+  ]
+}

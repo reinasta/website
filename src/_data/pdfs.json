@@ -1,0 +1,47 @@
+{
+  "papers": [
+    {
+      "text": "Varieties of linguistic economy (PhD thesis)",
+      "url": "/pdfs/thesis.pdf",
+      "date": "2015-04-25"
+    },
+    {
+      "text": "Logical explanation",
+      "url": "/pdfs/logical_explanation.pdf",
+      "date": "2016-08-23"
+    },
+    {
+      "text": "Definite imposters as coherent anaphors",
+      "url": "/pdfs/singular_imposters.pdf",
+      "date": "2016-04-27"
+    },
+    {
+      "text": "A tiny companion to the lonely indexical we",
+      "url": "/pdfs/plural_imposters.pdf",
+      "date": "2016-11-01"
+    },
+    {
+      "text": "Unstable preference, unstable deontic modals",
+      "url": "/pdfs/probmod_indep.pdf",
+      "date": "2016-02-26"
+    }
+  ],
+
+  "courses": [
+    {
+      "text": "First-order logic notes",
+      "url": "/pdfs/logic_notes.pdf",
+      "date": "2012-01-09"
+    },
+    {
+      "text": "Semantics syllabus",
+      "url": "/pdfs/syllabus_semantics.pdf",
+      "date": "2013-09-01"
+    },
+    {
+      "text": "Syntax Syllabus",
+      "url": "/pdfs/syllabus_syntax.pdf",
+      "date": "2014-01-10"
+    }
+  ]
+}

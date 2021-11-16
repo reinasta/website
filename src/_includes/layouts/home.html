@@ -1,0 +1,17 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<main>
+{% set ctaContent = primaryCTA %}
+{% include "partials/cta.html" %}
+</main>
+
+<footer>
+
+{% set ctaContent = cta %}
+{% include "partials/cta.html" %}
+
+</footer>
+
+{% endblock %}

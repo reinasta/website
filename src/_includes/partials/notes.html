@@ -1,0 +1,20 @@
+<article>
+    <h2>
+        Notes
+    </h2>
+    <ul class="note-list list">
+        <!-- display all notes with a 'post' tag -->
+        {%- for note in collections.post -%}
+        <li> <a href="{{ note.url }}">
+           ▱ {{ note.data.title }}
+        </a>
+        <br>
+        <em>
+            <time datetime="{{ note.data.date | w3DateFilter }}">
+                {{note.data.date | dateFilter}}
+            </time>
+        </em>
+        </li>
+        {%- endfor -%}
+    </ul>
+</article>

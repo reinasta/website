@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "text": "Home",
+      "url": "/",
+      "cls": "invisible-nav-item"
+    },
+    {
+      "text": "About",
+      "url": "/about/",
+      "cls": "visible-nav-item"
+    },
+    {
+      "text": "Work",
+      "url": "/work/",
+      "cls": "visible-nav-item"
+    },
+    {
+      "text": "Notes",
+      "url": "/notes/",
+      "cls": "visible-nav-item"
+    },
+    {
+      "text": "Contact",
+      "url": "/contact/",
+      "cls": "invisible-nav-item"
+    },
+    {
+      "text": "Code",
+      "url": "/code/",
+      "cls": "visible-nav-item"
+    },
+    {
+      "text": "All",
+      "url": "/all/",
+      "cls": "invisible-nav-item"
+    }
+
+  ]
+}

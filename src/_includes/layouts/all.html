@@ -1,0 +1,35 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<main>
+<!-- introduce yourself -->
+{% include "partials/intro.html" %}
+
+<!-- the cta.html partial is used twice, as we have
+     two calls to action on the homepage.
+     Note: partials can access variables set outside them
+-->
+
+
+<!-- primaryCTA is set in the front matter of index.md -->
+{% set ctaContent = primaryCTA %}
+{% include "partials/cta.html" %}
+
+<!-- the Notes section (links to blog posts) -->
+{% include "partials/notes.html" %}
+
+<!-- Pdf sections (links to pdf files) -->
+{% include "partials/pdfs.html" %}
+
+<!-- Software section -->
+{% include "partials/software.html" %}
+</main>
+
+<footer>
+<!-- reset call to action to the content stored in cta.json -->
+{% set ctaContent = cta %}
+{% include "partials/cta.html" %}
+</footer>
+
+{% endblock %}

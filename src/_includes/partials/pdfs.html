@@ -1,0 +1,38 @@
+<article>
+    <h2 class="intro__heading | weight-normal text-400 md:text-600">
+        Papers
+    </h2>
+    <ul class="paper-list list">
+        {% for paper in pdfs.papers %}
+        <li>
+            <a href="{{ paper.url }}">
+                ▱ {{ paper.text }}
+            </a>
+        <br>
+        <em>
+            <time datetime="{{ paper.date | w3DateFilter }}">
+                {{paper.date | dateFilter}}
+            </time>
+        </em>
+        </li>
+        {% endfor %}
+    </ul>
+    <h2 class="intro__heading | weight-normal text-400 md:text-600">
+        Courses taught
+    </h2>
+    <ul class="course-list list">
+        {% for course in pdfs.courses %}
+        <li>
+            <a href="{{ course.url }}">
+                ▱ {{ course.text }}
+            </a>
+        <br>
+        <em>
+            <time datetime="{{ course.date | w3DateFilter }}">
+                {{course.date | dateFilter}}
+            </time>
+        </em>
+        </li>
+        {% endfor %}
+    </ul>
+</article>

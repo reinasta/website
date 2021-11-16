@@ -1,0 +1,5 @@
+{
+  "_comment": "this data (.json) file ensures that all items in this dir will be displayed, by default, using the post layout",
+  "layout": "layouts/post.html",
+  "permalink": "/notes/{{ title | slug }}/index.html"
+}

@@ -1,0 +1,11 @@
+<article>
+    <h2>Open source tools</h2>
+    <dl class="software list">
+        <!-- loop through the value of the "tools" key
+             in src/_data/software.json -->
+        {% for tool in software.tools %}
+        <dt> <a href="{{ tool.url }}">▱ {{ tool.name }} </a> </dt>
+        <dl> {{ tool.summary }} </dl>
+        {% endfor %}
+    </dl>
+</article>

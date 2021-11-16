@@ -1,0 +1,52 @@
+{% set assetHash = global.random() %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        {% include "partials/meta-info.html" %}
+
+        <style>{% include "css/critical.css" %}</style>
+
+        {# Add facility for pages to declare an array of critical styles #}
+        {% if pageCriticalStyles %}
+        {% for item in pageCriticalStyles %}
+        <style>{% include item %}</style>
+        {% endfor %}
+        {% endif %}
+
+        <link rel="stylesheet" media="print" href="/fonts/fonts.css?{{ assetHash }}" onload="this.media='all'" />
+
+        {# Add facility for pages to declare an array of stylesheet paths #}
+        {% if pageStylesheets %}
+        {% for item in pageStylesheets %}
+        <link rel="stylesheet" media="print" href="{{ item }}?{{ assetHash }}" onload="this.media='all'" />
+        {% endfor %}
+        {% endif %}
+        <!-- any page can be added to the RSS reader to access the RSS feed -->
+        <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
+    </head>
+    <body id="theme" class="">
+
+        <script>
+         // Render blocking JS:
+         const theme = localStorage.getItem('darkMode') || "0";
+         if (theme == "1") {
+             document.body.className = "dark-theme";
+         } else {
+             document.body.className = "";
+         }
+        </script>
+
+        {% include "partials/site-head.html" %}
+        {% block content %}{% endblock %}
+
+
+        <script src="{{ '/scripts/dark-mode.js' | url }}">
+        </script>
+
+    </body>
+</html>

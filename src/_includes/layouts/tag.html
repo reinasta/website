@@ -1,0 +1,18 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<main>
+<article>
+<h1>Tagged “{{ tag }}”</h1>
+
+<ul class="note-list list">
+{% set taglist = collections[ tag ] %}
+{% for note in taglist | reverse %}
+  <li><a href="{{ note.url }}">▱ {{ note.data.title }}</a></li>
+{% endfor %}
+</ul>
+</article>
+</main>
+
+{% endblock %}
