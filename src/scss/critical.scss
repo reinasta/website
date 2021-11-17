@@ -156,7 +156,8 @@ ul.tags-list li {
 
 // lists
 ul.list {
-    list-style-type: "▱ ";
+    list-style-type: "▱  ";
+    margin-bottom: 1rem;
 }
 
 // footnotes
@@ -422,7 +423,7 @@ footer {
         height: auto;
 }
     main, footer {
-        padding-left: 4vw;
+        padding-left: 10vw;
         padding-right: 2vw;
     }
     nav.header-nav li:last-child {
