@@ -6,7 +6,7 @@
         <!-- display all notes with a 'post' tag -->
         {%- for note in collections.post -%}
         <li> <a href="{{ note.url }}">
-           ▱ {{ note.data.title }}
+           {{ note.data.title }}
         </a>
         <br>
         <em>

@@ -3,7 +3,7 @@ title: All
 layout: 'layouts/all.html'
 permalink: '/all/index.html'
 intro: 
-  image: '/images/self-portrait.png'
+  image: '/images/photo-round.png'
   name: 'Andrei Nasta'
   summary: 'technical writer, web designer'
   buttonText: 'See my work'

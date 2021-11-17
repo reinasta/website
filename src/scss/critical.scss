@@ -102,13 +102,13 @@ $background-dark-theme: #4E342E; // #424242;
 
 // source: https://projects.verou.me/css3patterns/#half-rombes
 .triangle-pattern {
-    background: hsla(14,100,63, 15%);
+    background: hsla(14,100%,63%, 0.15);
     background:
         linear-gradient(115deg,transparent 75%,rgba(255,255,255,.8) 75%) 0 0,
         linear-gradient(245deg,transparent 75%,rgba(255,255,255,.8) 75%) 0 0,
         linear-gradient(115deg,transparent 75%,rgba(255,255,255,.8) 75%) 7px -15px,
         linear-gradient(245deg, transparent 75%,rgba(255,255,255,.8) 75%) 7px -15px,
-        hsla(14,100,63, 15%);
+        hsla(14,100%,63%, 0.15);
     background-size: 15px 30px;
 
 }
@@ -152,6 +152,11 @@ ul.tags-list li {
 
 @include tag-list-itmes(#ffa98fa6, #3E2723);
 
+}
+
+// lists
+ul.list {
+    list-style-type: "▱ ";
 }
 
 // footnotes
