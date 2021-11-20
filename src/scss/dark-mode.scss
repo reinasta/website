@@ -1,0 +1,71 @@
+$font-dark-theme: #F5F5F5;
+$background-dark-theme: #4E342E; // #424242;
+$background-triangles-color: #553730;
+
+// background image
+@mixin bg-img-triang-dark {
+    background-image:
+        url("../../images/bg-triangles-brown-1.svg");
+    //background-position: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* cover the entire container */
+    background-blend-mode: normal; // overlay, lighten;
+}
+
+// Dark-mode styles
+.dark-theme {
+    // font and background colours
+    color: $font-dark-theme;
+    opacity: 0.87;
+    background-color: $background-dark-theme;
+    @include bg-img-triang-dark;
+
+    h1, h2, h3, h4 {
+        color: #FF8A65; // #FF8A80;
+    }
+
+    // icons and buttons in dark mode
+
+    .dark-mode-filter {
+        filter: invert(99%) sepia(54%) saturate(41%)
+                hue-rotate(245deg) brightness(112%) contrast(92%);
+    }
+    .logo-ellipse {
+        fill: $background-triangles-color;
+}
+    .clr-theme-btn {
+        color: $font-dark-theme;
+        background: $background-triangles-color;
+        font-weight: bold;
+    }
+
+    #landing-message {
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(337deg) brightness(101%) contrast(104%);
+    }
+
+    // links in dark mode
+    a:link {
+        color: white;
+    }
+
+    a:visited {
+        color: #FFEBEE;
+    }
+    a:hover, a:focus {
+        color: #FFAB91;
+    }
+    .header-nav a:hover, .header-nav a:focus {
+        color: #FFAB91;
+        font-weight: 500;
+}
+    a:active {
+        color: #E53935;
+    }
+
+    footer {
+        background-color: #212121;
+    }
+
+
+}
+

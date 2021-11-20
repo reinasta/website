@@ -1,0 +1,234 @@
+/* variables: colours etc */
+$font-light-theme: #212121;
+$nav-font-light-theme: #3E2723;
+$nav-font-light-theme-visited: #5D4037;
+$background-light-theme: #F5F5F5;
+
+// font sizes
+@mixin small-font($min: 0.6rem, $max: 16px) {
+    font-size: 1rem;
+    font-size: min(max($min,4vw), $max);
+}
+
+@mixin normal-font {
+    font-size: 1.35rem;
+    font-size: min(max(1.2rem, 6vw), 28px);
+}
+
+@mixin heading-font {
+    font-size: 2rem;
+    font-size: min(max(1.4rem, 8vw), 2rem);
+}
+
+// background image
+@mixin bg-img-triang-light {
+    background-image:
+        url("../../images/bg-triangles-brown.svg");
+    //background-position: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* cover the entire container */
+    background-blend-mode: overlay; // overlay, lighten;
+}
+
+
+// tag styling
+@mixin tag-list-itmes($bg-color, $text-color) {
+    display: inline-block;
+    @include small-font;
+    a { 
+        text-decoration: none;
+        padding: 0.1rem 0.2rem;
+        border: 0.1rem solid $bg-color;
+        border-radius: 0.2rem;
+    }
+    a:hover, a:focus {
+    background-color: $bg-color;
+    color: $text-color;
+    }
+}
+
+html {
+    @include normal-font;
+    opacity: 0.87;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: $background-light-theme;
+    @include bg-img-triang-light;
+    footer {
+        background-color: #D7CCC8;
+        opacity: 0.85;
+        h1, h2, h3, h4 {
+            color: #F44336; // #FF7043;
+        }
+        .cta {
+            padding-top: 1rem;
+        }
+    }
+}
+
+.visually-hidden {
+    //visibility: hidden;
+    display: none;
+}
+
+
+// headings
+h1, h2, h3, h4 {
+    color: #E53935; // #FF5722;
+    opacity: 0.85;
+    padding-top: 0.3rem;
+    padding-bottom: 0.2rem;
+    line-height: 120%;
+}
+
+h2 {
+    @include heading-font;
+}
+
+time, span.summary {
+    font-weight: 300;
+}
+
+blockquote {
+    padding: 0rem 1rem;
+    border-left: 0.3rem solid #ffa98fa6;
+    font-weight: 300;
+}
+
+// tags
+ul.tags-list li {
+
+@include tag-list-itmes(#ffa98fa6, #3E2723);
+
+}
+
+// lists
+ul.list {
+    //list-style-type: "▱  ";
+    list-style: none;
+    margin-bottom: 1rem;
+
+    li::before {
+        content: "▱"; 
+        color: #BF360C;
+        margin-left: -1rem;
+    }
+
+}
+
+// footnotes
+ol.footnotes-list {
+    list-style-type: decimal;
+}
+
+.footnotes-sep {
+    color: #E53935; // #FF5722;
+    opacity: 0.85;
+}
+
+div.intro-photo { 
+    width: 25vw; 
+    height: auto;
+    img { border-radius: 0.4rem; }
+}
+
+
+// ul.note-list, ul.paper-list, ul.course-list, dl.software
+.list {
+    li {
+        padding-top: 0.4rem;
+        padding-bottom: 0.2rem;
+    }
+    a {
+        text-decoration: none;
+    }
+    time {
+        @include small-font($min: 0.8rem, $max: 20px);
+    }
+}
+
+// Light-mode links
+a:link, button {
+    color: $nav-font-light-theme;
+    font-weight: 500;
+}
+
+a:visited {
+    color: $nav-font-light-theme-visited;
+}
+a:hover, a:focus {
+    color: #BF360C;
+}
+.header-nav a:hover, .header-nav a:focus {
+    color: #BF360C;
+    font-weight: 700;
+}
+a:active {
+    color: #BF360C;
+}
+
+
+
+
+/* header nav */
+
+ul {
+    list-style: none;
+    margin-top: 0rem;
+    padding-top: 0.5rem;
+}
+
+header nav {
+    @include small-font;
+}
+
+header nav a, header nav button {
+    font-family: 'Fira Code', monospace;
+    text-decoration:none;
+    text-transform: uppercase;
+    font-weight: 400;
+    opacity: 0.85;
+
+}
+
+
+/* Landing message */
+#landing-message {
+    width:100%;
+    height:auto;
+    max-width:500px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+
+// post (or note) styling
+article.individual-post p {
+    padding-top: 0.6rem;
+    padding-bottom: 0.4rem;
+}
+article.individual-post {
+    h1, h2, h3, h4 {
+        padding-top: 0.6rem;
+        padding-bottom: 0.4rem;
+    }
+}
+
+/* logos & buttons */
+
+.logo {
+    padding-top: 0.4rem;
+    opacity: 0.85;
+    width: 6vw;
+    height: auto;
+}
+
+button {
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    width: 1.2rem;
+    height: 1.2rem;
+
+}

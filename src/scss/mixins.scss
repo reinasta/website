@@ -1,0 +1,39 @@
+
+@mixin bg-img-toggle {
+    filter: invert(100%) sepia(0%) saturate(7500%)
+                  hue-rotate(318deg) brightness(107%) contrast(103%);
+}
+
+@mixin bg-img-black {
+    background-image:
+        url("images/landing-frame-black.svg");
+    //background-position: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 120% 120%; /* cover the entire container */
+    width: 100%;
+    height: auto;
+}
+
+@mixin bg-img-white {
+    background-image:
+        url("images/landing-frame-white.svg");
+    //background-position: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 110% 110%; /* cover, contain, 50% 50% */
+    width: 100%;
+    height: auto;
+}
+
+// source: https://projects.verou.me/css3patterns/#half-rombes
+.triangle-pattern {
+    background: hsla(14,100%,63%, 0.15);
+    background:
+        linear-gradient(115deg,transparent 75%,rgba(255,255,255,.8) 75%) 0 0,
+        linear-gradient(245deg,transparent 75%,rgba(255,255,255,.8) 75%) 0 0,
+        linear-gradient(115deg,transparent 75%,rgba(255,255,255,.8) 75%) 7px -15px,
+        linear-gradient(245deg, transparent 75%,rgba(255,255,255,.8) 75%) 7px -15px,
+        hsla(14,100%,63%, 0.15);
+    background-size: 15px 30px;
+
+}
+
