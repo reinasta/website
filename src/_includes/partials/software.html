@@ -5,7 +5,7 @@
              in src/_data/software.json -->
         {% for tool in software.tools %}
         <li> <a href="{{ tool.url }}">{{ tool.name }} </a> <br>
-        <em>{{ tool.summary }}</em> 
+        <span class="summary">{{ tool.summary }}</span> 
         </li>
         {% endfor %}
     </ul>

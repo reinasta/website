@@ -9,11 +9,9 @@
            {{ note.data.title }}
         </a>
         <br>
-        <em>
-            <time datetime="{{ note.data.date | w3DateFilter }}">
-                {{note.data.date | dateFilter}}
-            </time>
-        </em>
+        <time datetime="{{ note.data.date | w3DateFilter }}">
+            {{note.data.date | dateFilter}}
+        </time>
         </li>
         {%- endfor -%}
     </ul>

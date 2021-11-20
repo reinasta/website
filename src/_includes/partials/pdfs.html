@@ -9,11 +9,9 @@
                 {{ paper.text }}
             </a>
         <br>
-        <em>
-            <time datetime="{{ paper.date | w3DateFilter }}">
-                {{paper.date | dateFilter}}
-            </time>
-        </em>
+        <time datetime="{{ paper.date | w3DateFilter }}">
+            {{paper.date | dateFilter}}
+        </time>
         </li>
         {% endfor %}
     </ul>
@@ -27,11 +25,9 @@
                 {{ course.text }}
             </a>
         <br>
-        <em>
-            <time datetime="{{ course.date | w3DateFilter }}">
-                {{course.date | dateFilter}}
-            </time>
-        </em>
+        <time datetime="{{ course.date | w3DateFilter }}">
+            {{course.date | dateFilter}}
+        </time>
         </li>
         {% endfor %}
     </ul>
