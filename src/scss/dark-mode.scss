@@ -1,6 +1,8 @@
 $font-dark-theme: #F5F5F5;
 $background-dark-theme: #4E342E; // #424242;
 $background-triangles-color: #553730;
+$headings-dark: hsla(14.4,100%,69.8%, 0.87); // #FF8A65;
+
 
 // background image
 @mixin bg-img-triang-dark {
@@ -21,7 +23,8 @@ $background-triangles-color: #553730;
     @include bg-img-triang-dark;
 
     h1, h2, h3, h4 {
-        color: #FF8A65; // #FF8A80;
+        color: $headings-dark;
+
     }
 
     // icons and buttons in dark mode

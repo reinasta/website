@@ -5,9 +5,24 @@
 
 <main>
     <h2> {{ title }} </h2>
+    <span class="date-posted">
+        Posted on
     <time datetime="{{ date | w3DateFilter }}">
         {{ date | dateFilter }}
     </time>
+    </span>
+
+{% if updated %}
+    <span class="date-updated">
+        | Updated on
+
+    <time class="updated-note" datetime="{{ updated | w3DateFilter }}">
+        {{ updated | dateFilter }}
+    </time>
+    </span>
+{% endif %}
+
+
 {% if tags %}
 <p class="visually-hidden" id="tags-desc">Tags that this post has been filed under.</p>
 <ul class="tags-list" aria-describedby="tags-desc">

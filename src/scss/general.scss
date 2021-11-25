@@ -1,8 +1,17 @@
 /* variables: colours etc */
-$font-light-theme: #212121;
-$nav-font-light-theme: #3E2723;
-$nav-font-light-theme-visited: #5D4037;
-$background-light-theme: #F5F5F5;
+$font-light-theme: hsla(0,0%,12.9%,0.87); // #212121;
+$nav-font-light-theme: hsla(8.9,27.8%,19%,0.87); // #3E2723;
+$nav-font-light-theme-visited: hsla(14.2,25.7%,29%,0.87); // #5D4037;
+$background-light-theme: #F5F5F5; // hsla(0,0%,96.1%, 0.99)
+
+$brown-aux: hsla(8.9,27.8%,19%,0.87); // #3E2723; // = $nav-font-light-theme
+
+$headings-light: hsla(1.4,77.2%,55.3%, 0.87); //#E53935;
+$footer-headings: hsla(4.1,89.6%,58.4%, 0.87); // #F44336;
+$orange-aux: hsla(13.9,100%,78%, 0.87); // #ffa98fa6
+$orange-brown-aux: hsla(14.1,88.2%,39.8%, 0.7); // #BF360C;
+
+$footer-background: hsla(16,15.8%,81.4%, 1); // #D7CCC8;
 
 // font sizes
 @mixin small-font($min: 0.6rem, $max: 16px) {
@@ -49,24 +58,28 @@ $background-light-theme: #F5F5F5;
 
 html {
     @include normal-font;
-    opacity: 0.87;
+    scrollbar-color: $orange-brown-aux #c2c5cc;
 }
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
+    color: $font-light-theme;
     background-color: $background-light-theme;
     @include bg-img-triang-light;
     footer {
-        background-color: #D7CCC8;
+        background-color: $footer-background;
         opacity: 0.85;
         h1, h2, h3, h4 {
-            color: #F44336; // #FF7043;
-        }
-        .cta {
-            padding-top: 1rem;
+            color: $footer-headings;
         }
     }
 }
+
+.region {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 
 .visually-hidden {
     //visibility: hidden;
@@ -76,31 +89,33 @@ body {
 
 // headings
 h1, h2, h3, h4 {
-    color: #E53935; // #FF5722;
+    color: $headings-light;
     opacity: 0.85;
     padding-top: 0.3rem;
     padding-bottom: 0.2rem;
-    line-height: 120%;
+    line-height: 1.3;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 h2 {
     @include heading-font;
 }
 
-time, span.summary {
+span.date-updated, span.date-posted, span.summary {
     font-weight: 300;
 }
 
 blockquote {
     padding: 0rem 1rem;
-    border-left: 0.3rem solid #ffa98fa6;
+    border-left: 0.3rem solid $orange-aux;
     font-weight: 300;
 }
 
 // tags
 ul.tags-list li {
 
-@include tag-list-itmes(#ffa98fa6, #3E2723);
+@include tag-list-itmes($orange-aux, $brown-aux);
 
 }
 
@@ -112,7 +127,7 @@ ul.list {
 
     li::before {
         content: "▱"; 
-        color: #BF360C;
+        color: $orange-brown-aux;
         margin-left: -1rem;
     }
 
@@ -124,8 +139,8 @@ ol.footnotes-list {
 }
 
 .footnotes-sep {
-    color: #E53935; // #FF5722;
-    opacity: 0.85;
+    color: $headings-light;
+    opacity: 0.7;
 }
 
 div.intro-photo { 
@@ -159,14 +174,14 @@ a:visited {
     color: $nav-font-light-theme-visited;
 }
 a:hover, a:focus {
-    color: #BF360C;
+    color: $orange-brown-aux;
 }
 .header-nav a:hover, .header-nav a:focus {
-    color: #BF360C;
+    color: $orange-brown-aux;
     font-weight: 700;
 }
 a:active {
-    color: #BF360C;
+    color: $orange-brown-aux;
 }
 
 
@@ -206,14 +221,8 @@ header nav a, header nav button {
 
 // post (or note) styling
 article.individual-post p {
-    padding-top: 0.6rem;
-    padding-bottom: 0.4rem;
-}
-article.individual-post {
-    h1, h2, h3, h4 {
-        padding-top: 0.6rem;
-        padding-bottom: 0.4rem;
-    }
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* logos & buttons */
@@ -227,8 +236,47 @@ article.individual-post {
 
 button {
     border: none;
-    background: rgba(0, 0, 0, 0);
-    width: 1.2rem;
-    height: 1.2rem;
+    background: transparent;
 
+}
+
+// colophon section 
+section.colophon {
+    h2.colophon-title { 
+        color:  hsla(0,0%,96.1%, 0.40);
+        font-weight: 700;
+        line-height: 1.1;
+        @include heading-font;
+    }
+    background-color: $orange-brown-aux;
+    @include small-font;
+    color:  hsla(0,0%,96.1%, 0.87);
+    padding-bottom: 1rem;
+
+    ul.colophon-list {
+        li:nth-child(1) {
+        list-style-type: "Ⓕ ";
+        }
+        li:nth-child(2) {
+        list-style-type: "⚙ ";
+        }
+        li:nth-child(3) {
+        list-style-type: "✏ ";
+        }
+        li:nth-child(4) {
+        list-style-type: "ⓘ ";
+        }
+        li {
+        margin-left: 0.75rem;
+        }
+        a {
+            color:  hsla(0,0%,96.1%, 0.85);
+        }
+    }   
+}
+
+footer, section.colophon {
+    // offset-x | offset-y | blur-radius | color
+    box-shadow: 0px -1px 3px hsla(14.1,88.2%,12.8%, 0.4); // rgba(0, 0, 0, 0.2);
+    z-index: 9;
 }

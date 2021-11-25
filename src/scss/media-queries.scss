@@ -4,7 +4,7 @@
         width: 12vw;
         //height: auto;
 }
-    main, footer {
+    main, footer, .colophon {
         padding-left: 10vw;
         padding-right: 4vw;
     }
@@ -29,7 +29,7 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    main, footer {
+    main, footer, .colophon {
         padding-left: 12vw;
         padding-right: 2vw;
     }
@@ -40,7 +40,7 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    main, footer {
+    main, footer, .colophon {
         padding-left: 12vw;
         padding-right: 12vw;
     }
@@ -71,7 +71,7 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    main, footer {
+    main, footer, .colophon {
         padding-left: 20vw;
         padding-right: 24vw;
     }
@@ -88,6 +88,12 @@
             //margin-left: auto;
         }
     }
+    section.colophon h2.colophon-title {
+        //top: -1rem;
+    }
+    section.colophon ul.colophon-list {
+        //margin-top: -1rem;
+    } 
 
 
 }

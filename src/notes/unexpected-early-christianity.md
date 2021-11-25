@@ -2,6 +2,7 @@
 title: 'The Unexpected Early Christianity'
 summary: 'Early Christianity: the real historical thing'
 date: 2017-09-24T23:19:06+02:00
+updated: 2019-11-24T23:19:06+02:00
 displayOrder: 3
 featured: true
 tags: ['post', 'religion', 'history', 'Christianism']
