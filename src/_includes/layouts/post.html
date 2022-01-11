@@ -1,14 +1,13 @@
-{% extends "layouts/base.html" %}
+---
+layout: base
+---
 
-
-{% block content %}
-
-<main>
+<main class="indent">
     <h2> {{ title }} </h2>
     <span class="date-posted">
         Posted on
     <time datetime="{{ date | w3DateFilter }}">
-        {{ date | dateFilter }}
+        {{ date | dateFilterShort }}
     </time>
     </span>
 
@@ -17,7 +16,7 @@
         | Updated on
 
     <time class="updated-note" datetime="{{ updated | w3DateFilter }}">
-        {{ updated | dateFilter }}
+        {{ updated | dateFilterShort }}
     </time>
     </span>
 {% endif %}
@@ -39,5 +38,3 @@
 </article>
 
 </main>
-{% endblock %}
-

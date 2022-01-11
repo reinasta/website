@@ -1,0 +1,82 @@
+---
+layout: 'layouts/minimal.html'
+templateClass: 'exhibition'
+---
+
+
+
+<main>
+<section class="exhibition">
+<h2 class="exhibition-date"> July 23, 1923</h2>
+
+<div class="exhibition-circle-left-off">
+<svg width="100%" height="100%" viewBox="50 0 60 100">
+  <defs>
+    <clipPath id="cut-off-left">
+      <rect x="30" y="0" width="70" height="100" />
+    </clipPath>
+  </defs>
+
+  <circle cx="50" cy="50" r="48" clip-path="url(#cut-off-left)" />
+</svg>
+</div>
+
+
+<div class="exhibition-rect-small">
+<svg viewBox="-8 -30 42 42">
+    <rect width="12" height="12" fill="currentcolor"></rect>
+</svg>
+</div>
+
+<div class="exhibition-circle-square">
+<svg  width="100%" height="100%" viewBox="-40 -10 110 110">
+    <rect width="66" height="66" fill="#fab800"></rect>
+    <circle stroke="#da0000" stroke-width="14" fill-opacity="0" cx="0" cy="66" r="24"></circle>
+</svg>
+</div>
+
+<div class="exhibition-rects">
+    <svg width="100%" height="100%" viewBox="0 0 180 48" preserveAspectRatio="none">
+        <rect id="cut-off-left-1" x="0" width="12" height="48" fill="currentcolor"></rect>
+        <rect  x="12" width="12" height="48" fill-opacity="0"></rect>
+        <rect id="cut-off-left-2"  x="24"  width="12" height="48" fill="currentcolor"></rect>
+        <rect  x="36"  width="12" height="48" fill-opacity="0"></rect>
+        <rect id="cut-off-left-3" x="48" width="12" height="48" fill="currentcolor"></rect>
+        <rect  x="60"  width="12" height="48" fill-opacity="0"></rect>
+        <rect id="cut-off-left-4"  x="72"  width="12" height="48" fill="currentcolor"></rect>
+        <rect  x="84"  width="12" height="48" fill-opacity="0"></rect>
+        <rect id="cut-off-left-5" x="96" width="12" height="48" fill="currentcolor"></rect>
+        <rect  x="108" width="12" height="48" fill-opacity="0"></rect>
+        <rect id="cut-off-left-6" x="120" width="12" height="48" fill="currentcolor"></rect>
+        <rect x="132" width="12" height="48" fill-opacity="0"></rect>
+        <rect id="cut-off-left-7"  x="144"  width="12" height="48" fill="currentcolor"></rect>
+        <rect x="156"  width="12" height="48" fill-opacity="0"></rect>
+        <rect id="cut-off-left-8" x="168" width="12" height="48" fill="currentcolor"></rect>
+    </svg>
+</div>
+
+<div class="exhibition-circle-full">
+<svg width="100%" height="100%" viewBox="0 0 120 120">
+  <circle cx="60" cy="60" r="60" />
+</svg>
+</div>
+
+<div class="exhibition-circle-bottom-off">
+<svg width="100%" height="100%" viewBox="0 -50 100 100">
+  <defs>
+    <clipPath id="cut-off-bottom">
+      <rect x="0" y="0" width="100" height="60" />
+    </clipPath>
+  </defs>
+
+  <circle cx="50" cy="50" r="50" clip-path="url(#cut-off-bottom)" />
+</svg>
+</div>
+
+<h2 class="exhibition-subtitle">Exhibition</h2>
+<h1 class="exhibition-title">Bauhaus</h1>
+
+
+<script type="text/javascript" src="{{ '../scripts/exhibition.js' }}"></script>
+</section>
+</main>

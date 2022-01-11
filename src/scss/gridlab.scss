@@ -1,0 +1,45 @@
+@use "utils" as u;
+
+
+body.gridlab {
+    //background-color: #a87f2c;
+}
+
+ main section.gridlab {
+  display: grid;
+  gap: 10px;
+  margin-top: 10vw;
+  padding-bottom: 10vw;
+  margin-left: 10vw;
+  //height: 100vh;
+  //width: 42vw;
+  @include u.desktop {
+      //grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
+  }
+  @include u.tablet {
+      //width: 100vw;
+      //height: 80vh;
+      margin-left: 5vw;
+      grid-template-columns: repeat(2, 1fr);
+  }
+  @include u.mobile {
+      //width: 100vw;
+      //max-height: 600px;
+      margin-left: 2vw;
+      grid-template-columns: 1fr;
+  }
+
+  //  rows, 5 columns
+  grid-template-columns: repeat(3, 1fr);
+  //grid-template-rows: repeat(3, 1fr);
+
+
+  h2.gridlab-title {
+      grid-row: 1;
+      grid-column: 1 / -1;
+  }
+
+  img {
+      @include u.box-shadows();
+  }
+}

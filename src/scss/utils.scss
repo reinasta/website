@@ -1,0 +1,118 @@
+@use "sass:list";
+
+// futurismo colours
+$bg: #A1A990;
+$cl: #3C4468;
+$bg_1: #3D5AFE;
+$cl_1: #1A237E;
+$bg_2: #ffde03;
+$cl_2: #0336ff;
+
+
+// bauhaus colours
+$black: #191918;
+$blue: #0058a6;
+$grey: #ada6a3;
+$yellow: #fdde00;
+$red: #df0410;
+
+$black1: #212121;
+$blue1: #1d00db;
+$grey1: #607D8B;
+$yellow1: #FFEB3B;
+$red1: #E53935;
+
+$red-1-2: #BF360C;
+$red-2-2: #DD2C00;
+$red-3-2: #FF9E80;
+$red-4-2: #FF6E40;
+$red-5-2: #FF3D00;
+
+// list of colours for rectangles 1-5
+$original-colours: [$blue, $yellow, $grey, $red, $black];
+$blue-shades: [#303F9F, #7986CB, #C5CAE9, #3F51B5, #1A237E];
+$red-shades: [$red-2-2, $red-4-2, $red-3-2, $red-5-2, $red-1-2];
+$grey-shades: [#424242, #616161, #757575, #BDBDBD, #212121];
+
+
+// different colour themes (for rectangles etc)
+@mixin colour-theme($class,$clrs) {
+
+    body.#{$class} main .bauhaus {
+
+        @for $i from 1 through length($clrs) {
+            .rect#{$i} { background-color: list.nth($clrs, $i); }
+        }
+
+    }
+}
+
+// generate grid items of colour c
+@mixin gen-grid-items($tag-prefix, $tag-counter-start, $area-prefix, $num-items, $clr) {
+
+  @for $i from 1 through $num-items {
+    #{$tag-prefix + #{$tag-counter-start + ($i - 1)}} {
+      grid-area: #{$area-prefix + #{$i}};
+      background-color: $clr;
+    }
+  }
+}
+
+// box shadow
+@mixin box-shadows($clr: hsla(60,2%,9.6%,0.2)) {
+  box-shadow: 8px 5px 5px  $clr,
+             -4px 5px 5px $clr;
+  border-radius: 4px;
+}
+
+// animation
+@keyframes pulse {
+    0% {
+     transform: scale(1, 1);
+     opacity: 1;
+    }
+
+    50% {
+     transform: scale(1.1, 1.1);
+     opacity: 0.8;
+    }
+
+    100% {
+    transform: scale(1, 1);
+    opacity: 1;
+    }
+}
+
+
+// media queries
+
+/*
+    320px — 480px: Mobile devices
+    481px — 768px: iPads, Tablets
+    769px — 1024px: Small screens, laptops
+    1025px — 1200px: Desktops, large screens
+    1201px and more —  Extra large screens, TV
+
+*/
+
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin mobile {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

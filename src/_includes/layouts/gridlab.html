@@ -1,0 +1,38 @@
+---
+layout: 'base'
+templateClass: 'gridlab'
+---
+
+<main>
+<section class="gridlab">
+<h2 class="gridlab-title"> Gridlab: experiments with the css grid layout</h2>
+{% for item in gridlab.items %}
+<article class= "{{ item.text }}">
+    <!-- image -->
+    <a href="{{ item.url }}">
+     <img src="{{item.image}}"
+         class="{{ item.text }}-grid-exercise grid-thumbnail" 
+         alt="{{ item.text }} image (grid-exercise)" 
+         width="300px" height="400px">  
+    </a>
+    <!-- description -->
+    <a href="{{ item.url }}"> {{ item.content }} </a> 
+    |
+    <!-- more info  -->
+    <a href="{{ item.urlInfo }}"> More info
+      <svg version="2.0" width="16" height="16" viewBox="0 -2 20 20">
+        <use href="#ext-link-symbol" />
+      </svg>
+    </a>
+    |
+    <!-- codepen sandbox link  -->
+    <a href="{{ item.urlExt }}"> Codepen
+      <svg version="2.0" width="16" height="16" viewBox="0 -2 20 20">
+        <use href="#ext-link-symbol" />
+      </svg>
+    </a>
+</article>
+{% endfor %}
+
+</section>
+</main>

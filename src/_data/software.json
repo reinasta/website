@@ -9,6 +9,11 @@
       "name": "manki",
       "summary": "generate flashcards from text files via Anki",
       "url": "https://github.com/reinasta/manki"
+    },
+    {
+      "name": "gridlab",
+      "summary": "css grid experiments",
+      "url": "/gridlab"
     }
   ]
 }

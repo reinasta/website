@@ -106,6 +106,10 @@ span.date-updated, span.date-posted, span.summary {
     font-weight: 300;
 }
 
+.date-updated, .date-posted {
+    @include small-font;
+}
+
 blockquote {
     padding: 0rem 1rem;
     border-left: 0.3rem solid $orange-aux;

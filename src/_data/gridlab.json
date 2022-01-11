@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "text": "bauhaus",
+      "content": "Book cover",
+      "image": "/images/grid-bauhaus.png",
+      "url": "/bauhaus",
+      "urlExt": "https://codepen.io/reinasta/pen/RwLYPqX",
+      "urlInfo": "https://www.taschen.com/pages/en/catalogue/architecture/all/43440/facts.bauhaus_updated_edition.htm"
+    },
+    {
+      "text": "circle",
+      "content": "Poster",
+      "image": "../images/grid-circle.png",
+      "url": "/circle",
+      "urlExt": "https://codepen.io/reinasta/pen/BawONMK",
+      "urlInfo": "https://www.pinterest.com/pin/649081365023942641/"
+
+    },
+    {
+      "text": "exhibition",
+      "content": "Poster",
+      "image": "/images/grid-exhibition.png",
+      "url": "/exhibition",
+      "urlExt": "https://codepen.io/reinasta/pen/oNGPXJV",
+      "urlInfo": "https://www.pinterest.es/pin/417920040424503160/"
+    },
+    {
+      "text": "futurismo",
+      "content": "Poster",
+      "image": "/images/grid-futurismo.png",
+      "url": "/futurismo",
+      "urlExt": "https://codepen.io/reinasta/pen/ExwejGp",
+      "urlInfo": "https://fontsinuse.com/uses/10169/futurismo-1932-cover"
+
+    },
+    {
+      "text": "poster",
+      "content": "Poster",
+      "image": "/images/grid-poster.png",
+      "url": "/poster",
+      "urlExt": "https://codepen.io/reinasta/pen/QWqVbzd",
+      "urlInfo": "https://i.pinimg.com/originals/d7/9e/9e/d79e9e1fed61500bc65d2e7b9ac60a1e.png"
+
+    },
+    {
+      "text": "grid-book",
+      "content": "Book cover",
+      "image": "/images/grid-book.png",
+      "url": "/grid-book",
+      "urlExt": "https://codepen.io/reinasta/pen/VwMGXrY",
+      "urlInfo": "https://books.google.co.uk/books/about/Making_and_Breaking_the_Grid_Second_Edit.html?id=UWssDwAAQBAJ&redir_esc=y"
+
+    },
+    {
+      "text": "raster",
+      "content": "Book cover",
+      "image": "/images/grid-raster.png",
+      "url": "/raster",
+      "urlExt": "https://codepen.io/reinasta/pen/WNZgvPR",
+      "urlInfo": "https://www.goodreads.com/book/show/350962.Grid_Systems_in_Graphic_Design_Raster_Systeme_Fur_Die_Visuele_Gestaltung"
+
+    }
+  ]
+}

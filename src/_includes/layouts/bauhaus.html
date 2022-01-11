@@ -1,0 +1,31 @@
+---
+layout: 'layouts/minimal.html'
+templateClass: 'bauhaus'
+---
+
+<main>
+<section class="bauhaus">
+
+<div class="book-header">
+  <h1>bauhaus</h1>
+  <div class="subtitle">
+  <h2 id="b-archiv">bauhaus-archiv berlin</h2>
+  <h2>magdalena droste</h2>
+  </div>
+</div>
+
+{% for i in range(1,6) %}
+<div class="rect rect{{i}}"></div>
+{% endfor %}
+
+<div class="taschen"><h4>Taschen</h4></div>
+
+<div class="date">
+<h3>1919</h3>
+<h3>1933</h3>
+</div>
+
+<script type="text/javascript" src="{{ '../scripts/bauhaus.js' }}">
+</script>
+</section>
+</main>

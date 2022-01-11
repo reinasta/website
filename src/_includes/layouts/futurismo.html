@@ -1,0 +1,32 @@
+---
+layout: 'layouts/minimal.html'
+templateClass: 'futurismo'
+---
+
+
+<main>
+<section class="futurismo">
+<h1>Futurismo</h1>
+<h2>1932 Anno X<sup>0</sup></h2>
+<h3 id="marinetti"><span class="compressed">S.E.</span> Marinetti</h3>
+<h3 id="trentino">Nel Trentino</h3>
+
+{% for i in range(1,9) %}
+<div class="rect rect{{i}}">
+    <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <rect width="100" height="100" fill="currentcolor"></rect>
+    </svg>
+</div>
+{% endfor %}
+
+{% for i in range(1,3) %}
+<div class="circle circle{{i}}">
+          <svg width="100%" height="100%" viewBox="0 0 50 50" preserveAspectRatio="none">
+          <circle cx="25" cy="25" r="25" fill="currentcolor"></circle></svg>
+</div>
+{% endfor %}
+
+<script type="text/javascript" src="{{ '../scripts/futurismo.js' }}"></script>
+
+</section>
+</main>

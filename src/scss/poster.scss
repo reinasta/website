@@ -1,0 +1,81 @@
+@use "utils" as u;
+
+// Inspiration
+// https://i.pinimg.com/originals/d7/9e/9e/d79e9e1fed61500bc65d2e7b9ac60a1e.png
+
+body.poster {
+    background-color: #ecddbe;
+    text-transform: uppercase;
+}
+
+ main section.poster {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+
+  @include u.box-shadows();
+  @include u.desktop {
+      padding: 0vh 30vw;
+      //width: 60vw;
+  }
+  @include u.mobile {
+      padding: 10vh 0vw;
+      //width: 60vw;
+  }
+
+
+
+  //grid-template-columns: 20px 1fr 1fr 1fr 1fr 20px; // 6 columns
+  //grid-template-rows: 20px 1fr 1fr 1fr 1fr 1fr 1.5fr; // 7 rows
+  grid-template-columns: 0.25fr repeat(4, 1fr) 0.25fr;
+  grid-template-rows: 0.5fr repeat(5, 1fr) 1.5fr;
+  grid-template-areas: // x1-8, b1-2, l1-2, r1-4, y1-2, f1
+    "x1 x1 x1 x1 x1 x1"
+    "x2 x2 b1 r1 l1 x3"
+    "x6 b2 r2 x7 x7 x3"
+    "x6 b2 y1 y1 x8 x3"
+    "x6 r3 r3 y2 r4 x3"
+    "x5 x5 l2 y2 x4 x4"
+    "f1 f3 f3 f4 f4 f2";
+}
+
+//@include u.gen-grid-items(".poster > .shape", 1, "x", 8, #ecddbe);
+@include u.gen-grid-items(".poster > .shape", 9, "l", 2, #0268bd);
+@include u.gen-grid-items(".poster > .shape", 11, "r", 4, #c1322c);
+@include u.gen-grid-items(".poster > .shape", 15, "y", 2, #f1bb00);
+@include u.gen-grid-items(".poster > .shape", 17, "b", 2, #000000);
+//@include u.gen-grid-items(".poster > .shape", 19, "f", 2, #ecddbe);
+
+
+.poster > .poster-title {
+    grid-area: f3;
+    background-color: #ecddbe;
+    font-size: 7.9vw;
+    @include u.desktop {
+      font-size: 3.0vw;
+    }
+
+
+}
+
+.poster > .poster-sub-title {
+    grid-area: f4;
+    background-color: #ecddbe;
+    font-size: 3.8vw;
+    color: rgba(#000, 0.7);
+    padding-left: 2vw;
+    @include u.desktop {
+      font-size: 1.8vw;
+    }
+
+    .poster-date { 
+        font-size: 4vw; 
+        @include u.desktop {
+          font-size: 1.6vw;
+        }
+    }
+}
+
+.poster > .poster-title, .poster > .poster-sub-title {
+    align-self: center;
+} 

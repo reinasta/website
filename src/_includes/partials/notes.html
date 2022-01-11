@@ -5,9 +5,10 @@
     <ul class="note-list list">
         <!-- display all notes with a 'post' tag -->
         {%- for note in collections.post -%}
-        <li> <a href="{{ note.url }}">
+        <li>
+            <a href="{{ note.url }}">
            {{ note.data.title }}
-        </a>
+            </a>
         <br>
         <time datetime="{{ note.data.date | w3DateFilter }}">
             {{note.data.date | dateFilter}}

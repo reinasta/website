@@ -1,0 +1,23 @@
+---
+layout: 'layouts/minimal.html'
+templateClass: 'poster'
+---
+
+
+
+<main>
+<section class="poster">
+
+{% for i in range(1,21) %}
+<div class="shape shape{{i}}"></div>
+{% endfor %}
+
+<h1 class="poster-title">Bauhaus</h1>
+<div class="poster-sub-title">
+  <h2 class="poster-desc">Exhibition</h2>
+  <h2 class="poster-date">July 23, 1923</h2>
+</div>
+
+<script type="text/javascript" src="{{ '../scripts/poster.js' }}"></script>
+</section>
+</main>

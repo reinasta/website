@@ -1,0 +1,169 @@
+@use "utils" as u;
+
+// info / inspiration
+// https://www.goodreads.com/book/show/350962.Grid_Systems_in_Graphic_Design_Raster_Systeme_Fur_Die_Visuele_Gestaltung
+
+
+
+
+body.raster {
+    background-color: #fc1214;
+    line-height: 1.1;
+    h1, h2, h3 {
+        z-index: 3;
+    }
+    h1 {
+        font-size: 5vw;
+        margin: auto 0;
+        @include u.mobile {
+            font-size: 8.2vw;
+        }
+        @include u.tablet {
+            font-size: 7.5vw;
+        }
+
+    }
+    h2, h3 {
+        font-size: 1vw;
+        @include u.mobile {
+            font-size: 2.1vw;
+        }
+        @include u.tablet {
+            font-size: 2vw;
+        }
+
+    }
+}
+
+main section.raster {
+ display: grid;
+ height: 100vh;
+ width: 60vw;
+ margin-left: 24vw;
+ @include u.box-shadows();
+
+ // 17 columns, 33 rows (8 + 17 = 25 white areas for our would-be grid lines)
+ grid-template-columns:
+   .65fr 1px 1fr 1px .2fr 1px 1fr 1px .2fr 1px
+   1fr 1px .2fr 1px 1fr 1px .65fr;
+
+ grid-template-rows:
+   .65fr 1px 1fr 1px .2fr 1px 1fr 1px .2fr 1px
+   1fr 1px .2fr 1px 1fr 1px .2fr 1px 1fr 1px
+   .2fr 1px 1fr 1px .2fr 1px 1fr 1px .2fr 1px
+   1fr 1px .65fr;
+
+   gap: 1px;
+
+
+ @include u.tablet {
+     width: 100vw;
+     height: 100vh;
+     margin-left: 0;
+ }
+ @include u.mobile {
+     width: 100vw;
+     height: 100vh;
+     margin-left: 0;
+     //grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
+     //width: 100vw;
+ }
+
+}
+
+/*
+
+author - line 3; col 11
+title - line 11; col 3- (-3) 
+subtitle (col 3-5) + details (col 11 - (-2) ) - line 15 
+
+title-de - line 19; col 3- (-3)
+subtitle-de - line 23; col 3-5
+details-de - line 23; col 11 - (-2) 
+publisher - line -3
+*/
+
+.raster > h2.raster-author {
+    grid-row: 3;
+    grid-column: 11 / -2;
+    line-height: 1;
+    padding-top: 1rem;
+    //z-index: 3;
+    //justify-self: center;
+}
+
+.raster > h1.raster-title-en {
+    grid-row: 11;
+    grid-column: 3 / -3;
+    //z-index: 2;
+    //justify-self: center;
+}
+
+.raster > h2.raster-subtitle-en {
+    grid-row: 15;
+    grid-column: 3 / 8;
+    padding-top: 1rem;
+    //justify-self: center;
+}
+
+.raster > h3.raster-details-en {
+    grid-row: 15;
+    grid-column: 11 / -2;
+    padding-top: 1rem;
+    //justify-self: center;
+}
+
+.raster > h1.raster-title-de {
+    grid-row: 19;
+    grid-column: 3 / -3;
+    //justify-self: center;
+}
+
+.raster > h2.raster-subtitle-de {
+    grid-row: 23;
+    grid-column: 3 / 8;
+    padding-top: 1rem;
+    //justify-self: center;
+}
+
+.raster > h3.raster-details-de {
+    grid-row: 23;
+    grid-column: 11 / -2;
+    padding-top: 1rem;
+    //justify-self: center;
+}
+
+.raster > h2.raster-publisher {
+    grid-row: -3;
+    grid-column: 11 / 12;
+    //justify-self: center;
+}
+
+
+
+/* Grid lines */
+
+.raster-grid-line {
+    color: #FAFAFA;
+    opacity: 50%;
+}
+
+// vertical grid lines
+@for $i from 1 through 8 {
+
+  div.raster-grid-line-#{$i} {
+      grid-row: 1 / -1;
+      grid-column: $i * 2;
+  }
+
+}
+
+// horizontal grid lines
+@for $i from 1 through 17 {
+
+  div.raster-grid-line-#{$i + 8} {
+      grid-row: $i * 2;
+      grid-column: 2 / -2;
+  }
+
+}

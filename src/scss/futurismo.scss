@@ -1,0 +1,184 @@
+@use "utils" as u;
+
+// Futurismo
+
+// variables
+$w: 26px;
+
+body.futurismo {
+  height: 100%;
+  background: u.$bg;
+  color: u.$cl;
+
+}
+
+body.green {
+  background: u.$bg;
+  color: u.$cl;
+}
+body.blue {
+  background: u.$bg_1;
+  color: u.$cl_1;
+}
+body.yellow {
+  background: u.$bg_2;
+  color: u.$cl_2;
+}
+
+main {
+  padding: 0;
+}
+
+
+main section.futurismo {
+  margin: 10vh 10vw;
+  height: 80vh;
+  width: 80vw;
+  text-transform: uppercase;
+  line-height: 1.0;
+  display: grid;
+  grid-template-rows: 2fr $w 1fr $w 1fr $w 1fr $w 1fr $w 2fr;
+  grid-template-columns: $w 1fr $w 1fr 40px;
+  gap: 1px;
+  h1 {
+    letter-spacing: 8px;
+  }
+  h3 span.compressed {
+    letter-spacing: -6px;
+  }
+  h1, h2, h3 {
+  font-size: 8vw;
+  display: block;
+  margin: auto;
+  }
+  .circle {
+    margin-left: -10px;
+  }
+  .circle2 {
+    align-self: end;
+
+  }
+}
+
+/* phones */
+@media only screen and (max-width: 400px) {
+
+  main section.futurismo {
+      h3 span.compressed {
+        letter-spacing: -4px;
+      }
+  }
+}
+
+
+/* tall phones */
+@media only screen and (max-width: 400px) and (min-height: 400px) {
+  main section.futurismo {
+      height: 60vh;
+      h1, h2, h3 {
+          font-size: 9.0vw;
+      }
+}
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+main section.futurismo {
+  margin: 8vh 20vw;
+  height: 40vh;
+  width: 54vw;
+  h1, h2, h3 {
+  font-size: 6vw;
+  }
+}
+}
+
+// inter-line rectangles
+.futurismo {
+  .rect1, .rect2, .rect3, .rect4, .rect5 {
+  grid-column: 1 / -1;
+  }
+}
+
+.futurismo .rect1 {
+  grid-row: 2;
+}
+
+.futurismo .rect2 {
+  grid-row: 4;
+}
+
+.futurismo .rect3 {
+  grid-row: 6;
+}
+
+.futurismo .rect4 {
+  grid-row: 8;
+}
+
+.futurismo .rect5 {
+  grid-row: 10;
+}
+
+// small vertical rectangels
+.futurismo .rect6 {
+  grid-row: 1;
+  grid-column: 1 / 2;
+}
+
+.futurismo .rect7 {
+  grid-row: 1;
+  grid-column: 3 / 4;
+}
+
+.futurismo .rect8 {
+  grid-row: 11;
+  grid-column: 3 / 4;
+}
+
+// circles
+
+.futurismo .circle {
+    width: 50px;
+    height: 50px;
+}
+
+.futurismo .circle1 {
+  grid-row: 1;
+  grid-column: 5;
+}
+
+.futurismo .circle2 {
+  grid-row: 11;
+  grid-column: 5;
+}
+
+// Text
+
+.futurismo h1 {
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
+
+.futurismo h2 {
+  grid-column: 1 / -1;
+  grid-row: 5;
+
+}
+
+.futurismo h3#marinetti {
+  grid-column: 1 / -1;
+  grid-row: 7;
+}
+
+.futurismo h3#trentino {
+  grid-column: 1 / -1;
+  grid-row: 9;
+}
+
+// animation (pulse effect defined in utils.scss)
+.circle1 {
+    animation: pulse 1s linear 3;
+}
+

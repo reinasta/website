@@ -1,0 +1,170 @@
+@use "utils" as u;
+
+// Inspiration
+// https://books.google.co.uk/books/about/Making_and_Breaking_the_Grid_Second_Edit.html?id=UWssDwAAQBAJ&redir_esc=y
+
+body.grid-book {
+    background-color: #FAFAFA;
+    line-height: 1.1;
+}
+
+ main section.grid-book {
+  display: grid;
+  height: 100vh;
+  width: 60vw;
+  margin-left: 20vw;
+
+
+  // 10 columns, 12 rows
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(12, min-content);
+
+
+  @include u.desktop {
+      //grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
+  }
+  @include u.tablet {
+      width: 100vw;
+      height: 100vh;
+      margin-left: 0;
+  }
+  @include u.mobile {
+      width: 100vw;
+      height: 100vh;
+      margin-left: 0;
+      //grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
+      //width: 100vw;
+  }
+
+}
+
+section.grid-book > h1[class^='title-'], 
+section.grid-book > h1[class*=' title-'] {
+    z-index: 2;
+    color: #00695C; // rgba(0,175,195, 0.83);
+    opacity: 0.83;
+    //mix-blend-mode: multiply;
+    em {
+        color: #004D40;
+        opacity: 100%;
+        font-style: normal;
+    }
+    @include u.mobile {
+       font-size: 15.2vw;
+     }
+    @include u.tablet {
+       font-size: 15.0vw;
+     }
+    @include u.desktop {
+       font-size: 10.2vw;
+     }
+}
+
+section.grid-book h2 {
+    font-size: 1.2vw;
+    @include u.mobile {
+       font-size: 2vw;
+     }
+    @include u.tablet {
+       font-size: 2vw;
+     }
+
+}
+
+.grid-book > div.edition-info {
+    grid-row: 1;
+    grid-column: -6 / -1;
+    padding-top: 2vw;
+    padding-bottom: 6vw;
+    //z-index: 2;
+    //justify-self: center;
+    .edition-line-1 { 
+        color: rgba(245, 99, 31, 0.85);
+    }
+    .edition-line-2 { 
+        color: #004D40;
+    }
+}
+
+.grid-book > h1.title-line-1 {
+    grid-row: 3;
+    grid-column: 1 / -1;
+    //z-index: 2;
+    //justify-self: center;
+}
+
+.grid-book > h1.title-line-2 {
+    grid-row: 4;
+    grid-column: 1 / -1;
+    //z-index: 2;
+    //justify-self: center;
+}
+
+
+.grid-book > h1.title-line-3 {
+    grid-row: 5;
+    grid-column: 1 / -1;
+    //z-index: 2;
+    //justify-self: center;
+}
+
+.grid-book > h2.author {
+    grid-row: 5;
+    grid-column: -3 / -1;
+    z-index: 2;
+    justify-self: end;
+    @include u.mobile {
+        grid-column: -4 / -1;
+        justify-self: center;
+     }
+    @include u.tablet {
+        grid-column: -4 / -1;
+        justify-self: center;
+     }
+}
+
+.grid-book > h1.title-line-4 {
+    grid-row: 6;
+    grid-column: 1 / -2;
+    //z-index: 2;
+    justify-self: end;
+    span#grid-word {
+    background-color: #FAFAFA;
+    opacity: 100%;
+    color: rgba(245, 99, 31, 0.95);
+    }
+}
+
+.grid-book > h2.subtitle {
+    grid-row: 6;
+    grid-column: 1 / 5;
+    z-index: 2;
+    margin-top: auto;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    //justify-self: center;
+    color: #004D40;
+    background-color: #FAFAFA;
+}
+
+.grid-book > div.grid-book-square {
+    grid-row: 3 / 7;
+    grid-column: 2 / 11;
+    color: rgba(245, 99, 31, 0.75);
+    z-index: 0;
+    padding-top: 5vw;
+    //justify-self: center;
+}
+
+.grid-book > div.bg-pattern {
+    grid-row: 3 / -1;
+    grid-column: 1 / -1;
+    @include u.mobile {
+        grid-row: 2 / 8;
+     }
+    @include u.tablet {
+        grid-row: 2 / 8;
+     }
+
+
+}

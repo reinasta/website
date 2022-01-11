@@ -1,8 +1,8 @@
-{% extends "layouts/base.html" %}
+---
+layout: base
+---
 
-{% block content %}
-
-<main>
+<main class="indent">
 <!-- introduce yourself -->
 {% include "partials/intro.html" %}
 
@@ -31,5 +31,3 @@
 {% set ctaContent = cta %}
 {% include "partials/cta.html" %}
 </footer>
-
-{% endblock %}

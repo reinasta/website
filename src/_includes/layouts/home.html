@@ -1,8 +1,8 @@
-{% extends "layouts/base.html" %}
+---
+layout: base
+---
 
-{% block content %}
-
-<main>
+<main class="indent">
 {% set ctaContent = primaryCTA %}
 {% include "partials/cta.html" %}
 </main>
@@ -16,4 +16,3 @@
 
 {% include "partials/colophon.html" %}
 
-{% endblock %}
